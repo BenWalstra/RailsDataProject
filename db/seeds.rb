@@ -68,7 +68,7 @@ pokemons.each do |poke|
 
   current_types.each do |itype|
     type_actual = Type.where(pokemonType: itype).first
-    type_actual.move.each do |move|
+    type_actual.move(4).each do |move|
       PokemonMove.create(pokemon: current_pokemon, move: move)
     end
     PokemonType.create(pokemon: current_pokemon, type: type_actual)
