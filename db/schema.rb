@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_10_051653) do
+ActiveRecord::Schema.define(version: 2019_10_10_071853) do
 
   create_table "moves", force: :cascade do |t|
     t.string "move"
@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(version: 2019_10_10_051653) do
   end
 
   create_table "types", force: :cascade do |t|
-    t.string "type"
+    t.string "pokemonType"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
