@@ -2,6 +2,7 @@
 
 class Type < ApplicationRecord
   validates :pokemonType, presence: true, uniqueness: true
-  has_many :pokemon
+
+  has_many :pokemon, through: :pokemon_types
   has_many :move
 end
