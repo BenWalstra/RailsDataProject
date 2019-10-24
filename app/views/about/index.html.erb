@@ -1,21 +1,14 @@
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Pokemon Frenzy</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li><a href="#">Pokedex</a></li>
-      <li><a href="#">Moves</a></li>
-      <li><a href="#">Trainers</a></li>
-      <li class="active"><a href="#">About</a></li>
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link" href="#">Pokedex</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Moves</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Trainers</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">About</a></li>
     </ul>
-    <form class="navbar-form navbar-right" action="/pokemon/search_results" method="get">
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Search">
-      </div>
-      <button type="submit" class="btn btn-default">Submit</button>
+    <form class="form-inline" action="/pokemon/search_results" method="get">
+      <input class="form-control mr-sm-2" type="text">
+      <button class="btn btn-success " type="submit">Search</button>
     </form>
-  </div>
 </nav>
 
 <div style="width:500px;padding-left:50px;padding-top:20px;">
