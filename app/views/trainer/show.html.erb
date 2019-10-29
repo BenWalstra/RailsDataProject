@@ -1,2 +1,18 @@
-<h1>Trainer#show</h1>
-<p>Find me in app/views/trainer/show.html.erb</p>
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link" href="/pokemon">Pokedex</a></li>
+      <li class="nav-item"><a class="nav-link" href="/move">Moves</a></li>
+      <li class="nav-item"><a class="nav-link" href="/type">Types</a></li>
+      <li class="nav-item"><a class="nav-link" href="/trainer">Trainers</a></li>
+      <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+    </ul>
+</nav>
+
+<div class="card" style="width: 20rem;margin:0 auto;margin-top:10px;">
+  <div class="card-body">
+    <div class="card-body">
+      <h4 class="card-title"><%=@trainer.name%></h4>
+      <p class="card-text">Age: <%= @trainer.age%></p>
+    </div>
+  </div>
+</div>

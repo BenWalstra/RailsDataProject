@@ -1,2 +1,36 @@
-<h1>Pokemon#show</h1>
-<p>Find me in app/views/pokemon/show.html.erb</p>
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link" href="/pokemon">Pokedex</a></li>
+      <li class="nav-item"><a class="nav-link" href="/move">Moves</a></li>
+      <li class="nav-item"><a class="nav-link" href="/type">Types</a></li>
+      <li class="nav-item"><a class="nav-link" href="/trainer">Trainers</a></li>
+      <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+    </ul>
+</nav>
+
+<div class="card" style="width: 20rem;margin:0 auto;margin-top:10px;">
+  <div class="card-body">
+    <h3 class="card-title"><%= @pokemon.name%></h3>
+      <p class="card-text">HP: <%= @pokemon.hp%></p>
+      <p class="card-text">Attack: <%= @pokemon.attack%></p>
+      <p class="card-text">Defense: <%= @pokemon.defence%></p>
+      <p class="card-text">Speed: <%= @pokemon.speed%></p>
+      <p class="card-text">SpAttack <%= @pokemon.spAttack%></p>
+      <p class="card-text">SpDefense <%= @pokemon.spDefense%></p>
+      <p class="card-text"><%=if @pokemon.type.count > 1
+          'Types: '
+        else
+          'Type: '
+        end %>
+        <% @pokemon.type.each do |ty|%>
+        <%=link_to ty.pokemonType, ty%>
+        <% end %>
+      </p>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Moves</h5>
+    <% @pokemon.move.each do |mv| %>
+      <p class="card-text"><%=link_to mv.move, mv%></p>
+    <% end %>
+  </div>
+</div>

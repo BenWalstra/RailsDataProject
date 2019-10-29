@@ -6,10 +6,10 @@
       <li class="nav-item"><a class="nav-link" href="/trainer">Trainers</a></li>
       <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
     </ul>
-    <form class="form-inline" action="/pokemon/search_results" method="get">
-      <input class="form-control mr-sm-2" type="text">
-      <button class="btn btn-success " type="submit">Search</button>
-    </form>
+    <%= form_with(url: search_results_trainer_index_path, method: "get",class:"form-inline", local: true) do %>
+      <%= text_field_tag(:query,"",class:"form-control mr-sm-2", placeholder:"Search trainers") %>
+      <%= submit_tag("Search",class:"btn btn-success " ) %>
+    <% end %>
 </nav>
 
 <h1 style="margin-left:640px">Trainer</h1>

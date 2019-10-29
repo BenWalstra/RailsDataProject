@@ -14,6 +14,8 @@ class PokemonController < ApplicationController
   # GET /pokemon/search_results
   def search_results
     @query = params[:query]
-    @pokemon = Pokemon.where('name LIKE ?', "%#{@query}%")
+    all = Pokemon.where('name LIKE ?', "%#{@query}%")
+    @pokemonCount = all.count
+    @pagy, @pokemon = pagy(all, items: 10)
   end
 end

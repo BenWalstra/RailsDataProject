@@ -5,7 +5,8 @@ class Pokemon < ApplicationRecord
   validates :name, uniqueness: true
 
   has_many :pokemon_types
+  has_many :pokemon_moves
   has_many :type, through: :pokemon_types
-  has_many :move, through: :pokemon_move
+  has_many :move, through: :pokemon_moves
   has_many :trainer, through: :trainer_pokemon
 end

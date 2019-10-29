@@ -5,5 +5,7 @@ class Type < ApplicationRecord
 
   has_many :pokemon_types
   has_many :pokemon, through: :pokemon_types
-  has_many :move
+  # has_many :pokemon_moves
+  # has_many :move, through: :pokemon_moves
+  has_many :moves
 end
