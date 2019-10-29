@@ -12,16 +12,16 @@
     </form>
 </nav>
 
-<h1 style="margin-left:640px">Trainer</h1>
+<h1 style="margin-left:640px">Pokemon Type</h1>
 
 <div class="container" style="margin:auto;">
-  <% @trainer.each do |train|%>
+  <% @type.each do |ty|%>
   <div class="card bg-dark text-white" style="margin-bottom:10px;margin-left:10px;width:500px;float:left;">
     <div class="card-body">
-      <h4 class="card-title"><%=link_to train.name, train%></h4>
-      <p class="card-text">Age: <%= train.age%></p>
+      <h4 class="card-title"><%=link_to ty.pokemonType, ty%></h4>
     </div>
   </div>
   <% end %>
   <%==pagy_nav(@pagy)%>
 </div>
+
